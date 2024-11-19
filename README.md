@@ -63,8 +63,8 @@ Aplikasi Monitoring Kehadiran Siswa adalah sebuah aplikasi mobile yang dikembang
 
 2. **Clone Repository**
    ```bash
-   git clone https://github.com/username/absensi-siswa.git
-   cd absensi-siswa
+   git clone https://github.com/xfbriianto/absensi-siswa-flutter
+   cd absensi-siswa-flutter
    ```
 
 3. **Install Dependencies**
