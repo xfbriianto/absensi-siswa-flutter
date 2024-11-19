@@ -38,7 +38,7 @@ Aplikasi Monitoring Kehadiran Siswa adalah sebuah aplikasi mobile yang dikembang
   - Desain material yang elegan
   - Animasi yang responsif
   - Tema warna yang menarik
-  - Mode gelap & terang
+  - Mode gelap & terang (lupa jirr)
 
 ## 🔍 Preview Aplikasi
 
