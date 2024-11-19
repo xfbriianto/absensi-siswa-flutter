@@ -132,19 +132,9 @@ Kontribusi selalu diterima! Berikut langkah-langkah untuk berkontribusi:
 4. Push ke branch (`git push origin fitur-baru`)
 5. Buat Pull Request
 
-## 📝 Lisensi
+## 📝 tugas Praktikum
 
-Proyek ini dilisensikan di bawah Lisensi MIT - lihat file [LICENSE](LICENSE) untuk detail.
-
-## 💡 Pengembangan Mendatang
-
-- [ ] Integrasi dengan backend
-- [ ] Export data ke PDF/Excel
-- [ ] Notifikasi pengingat
-- [ ] Grafik kehadiran
-- [ ] Mode offline
-
-## 📞 Link
+## Link
 
 Link Proyek: [https://github.com/xfbriianto/absensi-siswa-flutter](https://github.com/xfbriianto/absensi-siswa-flutter)
 
