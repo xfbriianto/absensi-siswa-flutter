@@ -7,9 +7,11 @@ import '../widgets/animated_list_item.dart';
 class HistoryScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    //  Membangun layar riwayat kehadiran dengan desain modern
     return Consumer<AttendanceProvider>(
       builder: (context, provider, child) {
         return Container(
+          //Membuat background gradient untuk estetika visual
           decoration: BoxDecoration(
             gradient: LinearGradient(
               begin: Alignment.topLeft,
@@ -22,6 +24,7 @@ class HistoryScreen extends StatelessWidget {
           ),
           child: Column(
             children: [
+              // Judul layar dengan styling yang menarik
               Padding(
                 padding: const EdgeInsets.all(16.0),
                 child: Text(
@@ -35,7 +38,8 @@ class HistoryScreen extends StatelessWidget {
               ),
               Expanded(
                 child: provider.records.isEmpty
-                    ? Center(
+                    // Tampilan placeholder saat tidak ada riwayat
+                    ? const Center(
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
@@ -55,9 +59,10 @@ class HistoryScreen extends StatelessWidget {
                           ],
                         ),
                       )
+                    //  Membangun daftar riwayat kehadiran dengan animasi
                     : ListView.builder(
                         padding:
-                            EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                            const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                         itemCount: provider.records.length,
                         itemBuilder: (context, index) {
                           final record = provider.records[index];
@@ -65,28 +70,30 @@ class HistoryScreen extends StatelessWidget {
                             index: index,
                             child: Card(
                               child: Padding(
-                                padding: EdgeInsets.all(16),
+                                padding: const EdgeInsets.all(16),
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
+                                    //  Menampilkan tanggal dengan ikon kalender
                                     Row(
                                       children: [
-                                        Icon(
+                                        const Icon(
                                           Icons.calendar_today,
                                           color: Colors.indigo,
                                         ),
-                                        SizedBox(width: 8),
+                                        const SizedBox(width: 8),
                                         Text(
                                           DateFormat('dd MMMM yyyy')
                                               .format(record.date),
-                                          style: TextStyle(
+                                          style: const TextStyle(
                                             fontSize: 18,
                                             fontWeight: FontWeight.bold,
                                           ),
                                         ),
                                       ],
                                     ),
-                                    SizedBox(height: 12),
+                                    const SizedBox(height: 12),
+                                    // Menampilkan statistik kehadiran dengan desain menarik
                                     Row(
                                       mainAxisAlignment:
                                           MainAxisAlignment.spaceAround,
@@ -120,18 +127,20 @@ class HistoryScreen extends StatelessWidget {
     );
   }
 
+  //  Membuat widget status kehadiran dengan desain kustom
   Widget _buildAttendanceStatus(
       String label, int count, Color color, IconData icon) {
     return Container(
-      padding: EdgeInsets.all(12),
+      padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(
         color: color.withOpacity(0.1),
         borderRadius: BorderRadius.circular(12),
       ),
       child: Row(
         children: [
+          // Menampilkan ikon dan label status dengan warna berbeda
           Icon(icon, color: color, size: 20),
-          SizedBox(width: 8),
+          const SizedBox(width: 8),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
